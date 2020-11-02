@@ -13,17 +13,9 @@ Currently it supports:
 * Method: 'GET' & 'POST'
 
 ## YAML Examples:
-`#metadata: information about the flow
-#  platformVersion: the version of the bots platform that this flow was written to work with 
-metadata:
-  platformVersion: "1.1"
-main: true
-name: ODAUtilsPOST
-#context: Define the variables which will used throughout the dialog flow here.
+`
 context:
   variables:
-#The syntax for defining the variables is variablename: "variableType".
-# The "variableType" can be defined as a primitive type ("string", "boolean", "int", "float", "double"), "list", "map", "resourcebundle", or an entity name. A variable can also hold the results returned by the Intent Engine. For these variables, the "variableType" must be "nlpresult" (for example, iResult: "nlpresult").
     greeting: "string"
     body: "string"
     response: "string"
@@ -37,8 +29,6 @@ states:
     transitions:
       actions:
         unresolvedIntent: "start"
-        # You can add an intent action here
-        # e.g. Intent1 : "startIntent1"
 
   start:
     component: "System.List"
@@ -75,7 +65,7 @@ states:
         success: "successState"
         fail: "failState"
 #---------------------------------------------------------------------------------------------------#
-#                                          GET HTTPS                                                #
+#-                                          GET HTTPS                                              -#
 #---------------------------------------------------------------------------------------------------#
   callGetHttps:
     component: "com.oda.utilities.restconnector"
@@ -89,7 +79,7 @@ states:
         success: "successState"
         fail: "failState"
 #---------------------------------------------------------------------------------------------------#
-#                                          POST HTTP                                                #
+#-                                          POST HTTP                                              -#
 #---------------------------------------------------------------------------------------------------#
   setBodyPostHttp:
     component: "System.SetVariable"
@@ -112,7 +102,7 @@ states:
         success: "successState"
         fail: "failState"
 #---------------------------------------------------------------------------------------------------#
-#                                          POST HTTPS                                               #
+#-                                         POST HTTPS                                              -#
 #---------------------------------------------------------------------------------------------------#
   setBodyPostHttps:
     component: "System.SetVariable"
