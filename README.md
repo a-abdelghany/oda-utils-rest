@@ -13,7 +13,7 @@ Currently it supports:
 * Method: 'GET' & 'POST'
 
 ## YAML Examples:
-`
+```
 context:
   variables:
     greeting: "string"
@@ -32,15 +32,15 @@ states:
 
   start:
     component: "System.List"
-    properties: 
+    properties:
       prompt: "Choose an sample"
-      options: 
+      options:
       - label: "GET HTTP"
-        value: "getHttp" 
+        value: "getHttp"
       - label: "GET HTTPS"
-        value: "getHttps" 
+        value: "getHttps"
       - label: "POST HTTP"
-        value: "postHttp" 
+        value: "postHttp"
       - label: "POST HTTPS"
         value: "postHttps"         
     transitions:
@@ -50,7 +50,7 @@ states:
         postHttp: setBodyPostHttp
         postHttps: setBodyPostHttps
 
-#---------------------------------------------------------------------------------------------------#
+---------------------------------------------------------------------------------------------------#
 #                                          GET HTTP                                                 #
 #---------------------------------------------------------------------------------------------------#
   callGetHttp:
@@ -85,7 +85,7 @@ states:
     component: "System.SetVariable"
     properties:
       variable: body
-      value: 
+      value:
         title: "foo"
         body: "bar"
         userId: 1
@@ -108,7 +108,7 @@ states:
     component: "System.SetVariable"
     properties:
       variable: body
-      value: 
+      value:
         title: "foo"
         body: "bar"
         userId: 1
@@ -125,7 +125,7 @@ states:
         success: "successState"
         fail: "failState"
 #----------------------------------------------------------------------------------------------------
-      
+
   successState:
     component: "System.Output"
     properties:
@@ -138,6 +138,6 @@ states:
       text: "Call FAILED"
     transitions:
       return: "done"
- `
+ ```
 ## Contact
-> Feel free to contact me for any support at ahmed.m.abdelghany@oracle.com 
+> Feel free to contact me for any support at ahmed.m.abdelghany@oracle.com
