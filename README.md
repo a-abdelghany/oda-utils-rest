@@ -1,4 +1,19 @@
-#metadata: information about the flow
+# Project Name
+> ODAUtils-Rest
+
+## Table of contents
+* [General info](#general-info)
+* [YAML Example](#code-example)
+* [Contact](#contact)
+
+## General info
+A library that allows making REST calls.
+Currently it supports:
+* Protocol: 'HTTP' AND 'HTTPS'
+* Method: 'GET' & 'POST'
+
+## YAML Examples:
+`#metadata: information about the flow
 #  platformVersion: the version of the bots platform that this flow was written to work with 
 metadata:
   platformVersion: "1.1"
@@ -132,4 +147,7 @@ states:
     properties:
       text: "Call FAILED"
     transitions:
-      return: "done"      
+      return: "done"
+ `
+## Contact
+> Feel free to contact me for any support at ahmed.m.abdelghany@oracle.com 
